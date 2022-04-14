@@ -190,11 +190,11 @@
 //    return 0;
 //}
 
-//qsort方法
-//void qsort(void* base, 
-	//size_t num, 
-	//size_t width, 
-	//int(__cdecl* compare)(const void* elem1, const void* elem2));
+qsort方法
+void qsort(void* base, 
+	size_t num, 
+	size_t width, 
+	int(__cdecl* compare)(const void* elem1, const void* elem2));
 
 //int cmp_int(const void* e1, const void* e2)
 //{
