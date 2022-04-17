@@ -30,54 +30,54 @@
 //	return 0;
 //}
 
-//void game()
-//{
-//	int k = rand() % 100;
-//	int num = 0;
-//		printf("请输入一个0~99的数:\n");
-//		int n = 5;
-//		while (n--)
-//		{
-//			printf("答案：%d\n", k);
-//			scanf("%d", &num);
-//			if (num < k)
-//			{
-//				if (n > 0)
-//				{
-//					printf("小了,请重新输入，还有%d次机会\n", n);
-//				}
-//				else
-//					break;
-//			}
-//			else if (num > k)
-//			{
-//				if (n > 0)
-//				{
-//					printf("大了,请重新输入，还有%d次机会\n", n);
-//				}
-//				else
-//					break;
-//			}
-//			else
-//			{
-//				printf("找到了\n");
-//				break;
-//			}
-//		}
-//		if (n == 0)
-//			printf("失败了\n");
-//}
-//
-//
-//int main()
-//{
-//	while (1)
-//	{
-//		srand((unsigned)time(NULL));
-//		game();
-//	}
-//	return 0;
-//}
+void game()
+{
+	int k = rand() % 100;
+	int num = 0;
+		printf("请输入一个0~99的数:\n");
+		int n = 5;
+		while (n--)
+		{
+			printf("答案：%d\n", k);
+			scanf("%d", &num);
+			if (num < k)
+			{
+				if (n > 0)
+				{
+					printf("小了,请重新输入，还有%d次机会\n", n);
+				}
+				else
+					break;
+			}
+			else if (num > k)
+			{
+				if (n > 0)
+				{
+					printf("大了,请重新输入，还有%d次机会\n", n);
+				}
+				else
+					break;
+			}
+			else
+			{
+				printf("找到了\n");
+				break;
+			}
+		}
+		if (n == 0)
+			printf("失败了\n");
+}
+
+
+int main()
+{
+	srand((unsigned)time(NULL));
+	while (1)
+	{
+		game();
+	}
+	return 0;
+}
 
 
 //int main()
