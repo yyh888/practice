@@ -169,3 +169,11 @@
 
 
 
+int main()
+{
+	char t = 0;
+	int b = 0;
+	int c = 0;
+	scanf("%c %d %d", &t, &b, &c);
+	return 0;
+}
