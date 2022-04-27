@@ -1,0 +1,5 @@
+﻿  practice.c
+D:\practice\practice\practice_4_27\practice_4_27\practice.c(83,23): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
+D:\practice\practice\practice_4_27\practice_4_27\practice.c(110,20): warning C4047: “函数”:“const char *const ”与“int”的间接级别不同
+D:\practice\practice\practice_4_27\practice_4_27\practice.c(110,17): warning C4024: “printf”: 形参和实参 1 的类型不同
+  practice_4_27.vcxproj -> D:\practice\practice\practice_4_27\x64\Debug\practice_4_27.exe
