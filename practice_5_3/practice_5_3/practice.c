@@ -1,5 +1,6 @@
 #define  _CRT_SECURE_NO_WARNINGS
-
+#include<stdio.h>
+#include<stdlib.h>
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -180,3 +181,18 @@
 //    return head;
 //
 //}
+
+
+
+int main()
+{
+	int n = 4;
+	char* pa = (char*)malloc(n * sizeof(char));
+	int i = 0;
+	for (i = 0; i < n; i++)
+	{
+		pa[i] = 'a';
+		printf("%c ", pa[i]);
+	}
+	return 0;
+}

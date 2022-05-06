@@ -1,6 +1,6 @@
 #define  _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
-
+#include<string.h>
 
 //char* reverse_string(char arr[], int sz)
 //{
@@ -37,16 +37,24 @@
 //	return 0;
 //}
 
+//
+//int main()
+//{
+//    int x = 4;
+//    int count = 1;
+//    while ((x & 1) != 1)
+//    {
+//        x >>= 1;
+//        count++;
+//    }
+//    printf("%d", count);
+//	return 0;
+//}
+
 
 int main()
 {
-    int x = 4;
-    int count = 1;
-    while ((x & 1) != 1)
-    {
-        x >>= 1;
-        count++;
-    }
-    printf("%d", count);
+	char k = '\7';
+	printf("%d",sizeof(k));
 	return 0;
 }
