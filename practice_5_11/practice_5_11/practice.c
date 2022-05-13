@@ -201,11 +201,11 @@ int main()
     for (i = 0; i < 6; i++)
     {
         int j = 0;
-        for (j = 0; j < i; j++)
+        for (j = 0; j < i + 1; j++)
         {
             printf("  ");
         }
-        for (j = 11; j >= 1; j = j - 2 * i)
+        for (j = 0; j < 11 - 2 * i; j++)
         {
             printf("* ");
         }
