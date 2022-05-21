@@ -172,4 +172,21 @@
  * myQueueFree(obj);
 */
 
+#include<stdio.h>
 
+
+void Test(int* p)
+{
+	*p = 20;
+}
+
+
+
+int main()
+{
+	int a = 10;
+	int* p = &a;
+	Test(p);
+	printf("%d", *p);
+	return 0;
+}
