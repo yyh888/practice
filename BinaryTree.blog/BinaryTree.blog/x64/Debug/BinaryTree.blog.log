@@ -1,0 +1,4 @@
+﻿  practice.c
+D:\practice\practice\BinaryTree.blog\BinaryTree.blog\practice.c(126,12): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\practice\practice\BinaryTree.blog\BinaryTree.blog\practice.c(126,12): message : 请考虑在格式字符串中使用“%zd”
+  BinaryTree.blog.vcxproj -> D:\practice\practice\BinaryTree.blog\x64\Debug\BinaryTree.blog.exe
