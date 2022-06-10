@@ -219,3 +219,88 @@
 //    root->right = left;
 //    return root;
 //}
+
+
+
+
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+
+
+//bool _isSubtree(struct TreeNode* p, struct TreeNode* q)
+//{
+//    if (p == NULL && q == NULL)
+//    {
+//        return true;
+//    }
+//    if (p == NULL || q == NULL)
+//    {
+//        return false;
+//    }
+//    if (p->val != q->val)
+//    {
+//        return false;
+//    }
+//    return _isSubtree(p->left, q->left) && _isSubtree(p->right, q->right);
+//}
+//
+//
+//bool isSubtree(struct TreeNode* root, struct TreeNode* subRoot) {
+//    //遍历root所有节点比较
+//    //没有则false
+//    if (root == NULL)
+//    {
+//        return false;
+//    }
+//    if (_isSubtree(root, subRoot))
+//    {
+//        return true;
+//    }
+//    return isSubtree(root->left, subRoot) || isSubtree(root->right, subRoot);
+//}
+
+
+
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+
+
+//bool _isBalanced(struct TreeNode* root, int* ph)
+//{
+//    if (root == NULL)
+//    {
+//        *ph = 0;
+//        return true;
+//    }
+//    int lefthight = 0;
+//    if (!_isBalanced(root->left, &lefthight))
+//    {
+//        return false;
+//    }
+//    int righthight = 0;
+//    if (!_isBalanced(root->right, &righthight))
+//    {
+//        return false;
+//    }
+//    *ph = lefthight > righthight ? lefthight + 1 : righthight + 1;
+//    return abs(lefthight - righthight) < 2;
+//}
+//
+//
+//
+//bool isBalanced(struct TreeNode* root) {
+//    int hight = 0;
+//    return _isBalanced(root, &hight);
+//}
