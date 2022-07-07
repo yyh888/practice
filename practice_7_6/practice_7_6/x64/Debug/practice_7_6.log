@@ -1,0 +1,3 @@
+﻿  practice.c
+D:\practice\practice\practice_7_6\practice_7_6\practice.c(122,13): warning C4090: “return”: 不同的“const”限定符
+  practice_7_6.vcxproj -> D:\practice\practice\practice_7_6\x64\Debug\practice_7_6.exe
