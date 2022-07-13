@@ -1,0 +1,4 @@
+﻿  practice.c
+D:\practice\practice\practice_7_13\practice_7_13\practice.c(80,11): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\practice\practice\practice_7_13\practice_7_13\practice.c(88): warning C4716: “my_atoi”: 必须返回一个值
+  practice_7_13.vcxproj -> D:\practice\practice\practice_7_13\x64\Debug\practice_7_13.exe
