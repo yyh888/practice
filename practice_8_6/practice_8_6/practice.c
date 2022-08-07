@@ -351,12 +351,3 @@ void myStackFree(MyStack* obj) {
 //}
 
 
-#include <stdio.h>
-
-int main()
-{
-    char str[] = "s";
-    int sz = sizeof(str);
-    printf("%d", sz);
-    return 0;
-}
