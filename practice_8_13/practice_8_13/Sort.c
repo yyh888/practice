@@ -207,7 +207,19 @@ int PartSort2(int* a, int left, int right)
 // 快速排序前后指针法
 int PartSort3(int* a, int left, int right)
 {
-
+	int key = a[left];
+	int prev = left, cur = left + 1;
+	while (cur <= right)
+	{
+		if (a[cur] < key)
+		{
+			prev++;
+			Swap(&a[cur], &a[prev]);
+		}
+		cur++;
+	}
+	Swap(&a[prev], &a[left]);
+	return prev;
 }
 
 
@@ -217,7 +229,7 @@ void QuickSort(int* a, int left, int right)
 	{
 		return;
 	}
-	int key = PartSort2(a, left, right);
+	int key = PartSort3(a, left, right);
 	QuickSort(a, left, key - 1);
 	QuickSort(a, key + 1, right);
 }
