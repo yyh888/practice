@@ -1,5 +1,5 @@
 #include "Sort.h"
-
+#include "Stack.h"
 void PrintSort(int* a, int n)
 {
 	for (int i = 0; i < n; i++)
@@ -235,4 +235,29 @@ void QuickSort(int* a, int left, int right)
 }
 
 // 快速排序 非递归实现
-void QuickSortNonR(int* a, int left, int right);
+void QuickSortNonR(int* a, int left, int right)
+{
+	Stack st;
+	StackInit(&st);
+	StackPush(&st, left);
+	StackPush(&st, right);
+	while (!StackEmpty(&st))
+	{
+		int right = StackTop(&st);
+		StackPop(&st);
+		int left = StackTop(&st);
+		StackPop(&st);
+		int mid = PartSort1(a, left, right);
+		if (mid - left > 1)
+		{
+			StackPush(&st, left);
+			StackPush(&st, mid - 1);
+		}
+		if (right - mid > 1)
+		{
+			StackPush(&st, mid + 1);
+			StackPush(&st, right);
+		}
+	}
+	StackDestroy(&st);
+}
