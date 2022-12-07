@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+
+const int N = 1e5 + 10, M = 31 * N;
+int son[M][2], idx;
+
+void insert(int x)
+{
+    int p = 0;
+    for (int i = 30; i >= 0; i--)
+    {
+        int n = x >> i & 1;
+        if (!son[p][n]) son[p][n] = ++idx;
+        p = son[p][n];
+    }
+}
+
+int search(int x)
+{
+    int p = 0;
+    int ans = 0;
+    for (int i = 30; i >= 0; i--)
+    {
+        int n = x >> i & 1;
+        if (son[p][!n])
+        {
+            p = son[p][!n];
+            ans = ans * 2 + (!n);
+        }
+        else
+        {
+            p = son[p][n];
+            ans = ans * 2 + n;
+        }
+    }
+    return ans;
+}
+
+int main()
+{
+    int n;
+    cin >> n;
+    int ans = 0;
+    for (int i = 0; i < n; i++)
+    {
+        int num;
+        scanf("%d", &num);
+        insert(num);
+        int t = search(num);
+        ans = max(ans, t ^ num);
+    }
+    cout << ans;
+    return 0;
+}
