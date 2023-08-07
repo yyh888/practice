@@ -1,5 +1,7 @@
 #include <iostream>
 #include <mutex>
+#include <memory>
+#include <atomic>
 using namespace std;
 
 //int main()
@@ -20,14 +22,11 @@ namespace yyh
 		{
 			_ptr = ptr;
 			_pcnt = new int(1);
-			_pmtx = new std::mutex;
 		}
 
 		~unique_ptr()
 		{
-			_pmtx->lock();
 			(*_pcnt)--;
-			_pmtx->unlock();
 			if (*_pcnt == 0)
 			{
 				delete _ptr;
@@ -53,20 +52,15 @@ namespace yyh
 		unique_ptr(const unique_ptr<T>& uptr)
 			: _ptr(uptr._ptr)
 			, _pcnt(uptr._pcnt)
-			, _pmtx(uptr._pmtx)
 		{
-			_pmtx->lock();
 			(*_pcnt)++;
-			_pmtx->unlock();
 		}
 
 		unique_ptr<T>& operator=(const unique_ptr<T>& uptr)
 		{
 			if (_ptr != uptr._ptr)
 			{
-				_pmtx->lock();
 				(*_pcnt)--;
-				_pmtx->unlock();
 				if (*_pcnt == 0)
 				{
 					delete _ptr;
@@ -74,9 +68,7 @@ namespace yyh
 				}
 				_ptr = uptr._ptr;
 				_pcnt = uptr._pcnt;
-				_pmtx->lock();
 				(*_pcnt)++;
-				_pmtx->unlock();
 			}
 			return *this;
 		}
@@ -88,8 +80,7 @@ namespace yyh
 		}
 	private:
 		T* _ptr;
-		int* _pcnt;
-		std::mutex *_pmtx;
+		atomic<int*> _pcnt;
 	};
 }
 
