@@ -195,6 +195,7 @@ void fun1()
 {
 	int a = 1;
 	int b = 2;
+	fun();
 }
 
 int main()
