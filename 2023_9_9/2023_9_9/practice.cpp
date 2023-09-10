@@ -12,23 +12,23 @@ using namespace std;
 //}
 
 
-//struct A
-//{
-//	int a1;
-//public:
-//	A(int x = 2) :a1(x) {}
-//	void f1() { cout << a1; }
-//	friend A operator++(A& p) { ++p.a1; return p; }
-//};
-//
-//int main()
-//{
-//	A obj1;
-//	(++obj1).f1();
-//	operator++(obj1).f1();
-//	(++obj1).f1();
-//	return 0;
-//}
+struct A
+{
+	int a1;
+public:
+	A(int x = 2) :a1(x) {}
+	void f1() { cout << a1; }
+	friend A operator++(A& p) { ++p.a1; return p; }
+};
+
+int main()
+{
+	A obj1;
+	(++obj1).f1();
+	operator++(obj1).f1();
+	(obj1++).f1();
+	return 0;
+}
 
 
 //
